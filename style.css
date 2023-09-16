@@ -6,16 +6,20 @@
   background-color: #4d0f00;
   /* adding padding to top, bottom, right, left is chanding the canvas dimensions so we use overflow:hidden  */
   overflow: hidden;
+  /* color, shapes are very sharp, so we are adding blur property */
+  filter: blur(2px);
 }
 
 /* adding border */
 .frame {
   border: 50px solid black;
   width: 500px;
-  /* add padding to adjust spacing within elements */
+  /* add padding(white area) to adjust spacing within elements */
   padding: 50px;
   /* add margin to get space outside element, set vertical height to 20px horizantal height to auto  */
   margin: 20px auto;
+  /* The rectangles are too small and their edges don't have the soft quality of a painting. */
+  box-shadow: 0 0 3px 3px #efb762;
 }
 
 /* adding class one selector for first rectangle */
@@ -24,8 +28,13 @@
   height: 150px;
   background-color: #efb762;
   margin: 20px auto;
-  /* add padding to push down to 1px */
-  /* padding: 1px; */
+  /* cutting corners of the box */
+  border-radius: 9px;
+
+  /* Rotate each rectangle to give them more of an imperfect, hand-painted look.
+
+Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees. */
+  transform: rotate(-0.6deg);
 }
 /* adding another class for 2nd rectangle */
 .two {
@@ -34,6 +43,16 @@
   background-color: #8f0401;
   /*In this case, the bottom margin of the .one element pushes .two down 20 pixels.  */
   margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px#8f0401;
+  /* top-left radius and bottom-right radius to 8px, and top-right radius and bottom-left radius to 10px. */
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+}
+
+/* adding blur property */
+.one,
+.two {
+  filter: blur(1px);
 }
 
 /* You don't always have to use pixels when sizing an element. */
@@ -42,4 +61,12 @@
   height: 28%;
   background-color: #b20403;
   margin: auto;
+  /* adding blur property */
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px#b20403;
+  /* The border-radius property accepts up to four values to round the top-left, top-right, bottom-right, and bottom-left corners.
+
+Round the top-left corner of .three by 30 pixels, the top-right by 25 pixels, the bottom-right by 60 pixels, and bottom-left by 12 pixels. */
+  border-radius: 30px 25px 60px 12px;
+  transform: rotate(-0.2deg);
 }
