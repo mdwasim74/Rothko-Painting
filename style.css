@@ -1,0 +1,45 @@
+/* adding class selector with wid, height */
+
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  /* adding padding to top, bottom, right, left is chanding the canvas dimensions so we use overflow:hidden  */
+  overflow: hidden;
+}
+
+/* adding border */
+.frame {
+  border: 50px solid black;
+  width: 500px;
+  /* add padding to adjust spacing within elements */
+  padding: 50px;
+  /* add margin to get space outside element, set vertical height to 20px horizantal height to auto  */
+  margin: 20px auto;
+}
+
+/* adding class one selector for first rectangle */
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  /* add padding to push down to 1px */
+  /* padding: 1px; */
+}
+/* adding another class for 2nd rectangle */
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  /*In this case, the bottom margin of the .one element pushes .two down 20 pixels.  */
+  margin: 0 auto 20px;
+}
+
+/* You don't always have to use pixels when sizing an element. */
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+}
